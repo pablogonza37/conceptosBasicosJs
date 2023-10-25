@@ -12,11 +12,9 @@ const edad = parseInt(prompt('Ingrese su edad'));
 
 if(edad >= 16 && edad < 18 || edad > 70){
     alert('Es optativo votar');
-}else{
-    if(edad >= 18 && edad <= 70){
-        alert('Usted debe votar');
-    }else{
-        alert('No puedes votar')
-    }
-    
+} else if(edad >= 18 && edad <= 70){
+    alert('Usted debe votar');
+} else{
+    alert('No puedes votar');
 }
+    
