@@ -2,14 +2,26 @@
 
 let saldo = 1000;
 
-const opcion = prompt('Selecione una opcion: 1- consultar el salto 2- extraer dinero 3- ingresar dinero')
+const opcion = parseInt(prompt('Selecione una opcion: 1- consultar el salto 2- extraer dinero 3- ingresar dinero'));
 
 if(opcion === 1){
-    console.log('debo mostrar el saldo');
+    
+    alert(`Su saldo actual es $${saldo}`); 
 }else if(opcion === 2){
-    console.log('ingrese el dinero')
+    console.log('ingrese el dinero');
+    const extraccion = parseInt(prompt('Cuanto desea extraer?'));
+    if (extraccion > saldo){
+        alert('No tiene dinero suficiente. Ingrese otrs cantidad')
+    }else {
+        saldo -= extraccion;
+        alert(`Su saldo actual es $${saldo}`);
+    }
 }else if(opcion === 3){
     console.log('ingreso el dinero');
-}else{
+    const ingreso = parseInt(prompt('Cuanto dinero desea ingresar:'));
+    saldo += ingreso;
+    alert(`Su saldo actual es $${saldo}`);
+}else{   
     console.log('ingreso una opcion invalida');
+    alert('ingreso una opcion invalida');  
 }
