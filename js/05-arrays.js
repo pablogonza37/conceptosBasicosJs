@@ -84,3 +84,5 @@ for(let i=0; i < juegos.length; i++){
     document.write(`<li>${juegos[i]}</li>`);
 }
 document.write(`</ul>`);
+
+//juegos[3] = ['p1', 'p2', [35,36,37]]
