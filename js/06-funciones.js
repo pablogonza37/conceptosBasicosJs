@@ -13,6 +13,17 @@ function sumar(numero1, numero2){
     return resultado;
 }
 
+// arrow functions
+//const sumar = (numero1, numero2) => {
+//    const resultado = numero1 + numero2;
+//    return resultado;
+//} 
+
+const sumar = (numero1, numero2) => numero1 + numero2;
+
+
+
+
 // invocar o llamar una funcion
 saludar();
 
