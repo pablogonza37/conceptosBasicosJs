@@ -88,6 +88,7 @@ console.log(juegos[8]);
 console.log(juegos[8].includes('Kombat')); // devuelve true o false
 console.log(juegos[8].includes('kombat'));
 
+// encontrar elementos de un array con filter
 //const juegosMKT = juegos.filter((juego) => condicion logica)
 //const juegosMKT = juegos.filter((juego) => juego === 'Mortal Kombat 1');
 const juegosMKT = juegos.filter(juego => juego.includes('Kombat') );
@@ -95,3 +96,16 @@ console.log(juegosMKT);
 
 mostrarArray(juegosMKT, 'Familia de juegos de Mortal Kombat');
 
+// encontar 1 elemento de un array con find 
+
+const juegoBuscado = juegos.find( itemJuego => itemJuego.includes('Minecraft'));
+const juegoBuscado2 = juegos.find( itemJuego => itemJuego.includes('PES'));
+
+document.write(`<p>Juego buscado: ${juegoBuscado}</p>`);
+
+// Operador ternario
+// (condicion logica)? toda la logica si se cumple la condicion : la logica si no se cumple la condicion
+const respuesta = (juegoBuscado2 !== undefined)? juegoBuscado2 : 'No se encontro el termino buscado';
+document.write(`<p>Juego buscado: ${respuesta}</p>`);
+
+document.write(`<p>Juego buscado: ${(juegoBuscado2 !== undefined)? juegoBuscado2 : 'No se encontro el termino buscado'}</p>`);
