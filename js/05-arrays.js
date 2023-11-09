@@ -109,3 +109,5 @@ const respuesta = (juegoBuscado2 !== undefined)? juegoBuscado2 : 'No se encontro
 document.write(`<p>Juego buscado: ${respuesta}</p>`);
 
 document.write(`<p>Juego buscado: ${(juegoBuscado2 !== undefined)? juegoBuscado2 : 'No se encontro el termino buscado'}</p>`);
+
+//buscar metodo find index 
