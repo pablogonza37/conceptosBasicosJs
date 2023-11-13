@@ -9,12 +9,18 @@ const usuario = {
     password: '1235Ab@',
     //metodos
     login: function (){
-        document.write(`<p>El usuario inicio sesión</p>`);
+        //este this devueleve una referencia ami objeto usuario
+        console.log(this);
+        document.write(`<p>El usuario ${this.nombre}, inicio sesión</p>`);
     },
     logout: () =>{
+        //este this devuelve el objeto windows
+        console.log(this);
         document.write(`<p>El usuario cerro sesión</p>`);
     }
 }
+
+console.log(this);
 
 //mostrar un objeto
 console.log(usuario);
@@ -32,3 +38,21 @@ console.log(usuario);
 
 //cuidado con las propiedades mal escritas o que no existen
 document.write(`<p>Tel: ${usuario.tel}</p>`);
+
+//borrar una propiedad de un objeto
+delete usuario.perfil;
+console.log(usuario);
+
+//metodo para saber si mi objeto tiene una propiedad
+
+console.log(usuario.hasOwnProperty('edad'));
+
+//invocar un metodo del objeto
+usuario.login();
+usuario.logout();
+
+
+
+
+
+
